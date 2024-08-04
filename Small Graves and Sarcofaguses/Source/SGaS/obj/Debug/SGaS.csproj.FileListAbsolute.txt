@@ -1,4 +1,0 @@
-D:\Steam\steamapps\common\RimWorld\Mods\Small Graves and Sarcofaguses\Assemblies\SGaS.dll
-D:\Steam\steamapps\common\RimWorld\Mods\Small Graves and Sarcofaguses\Source\SGaS\obj\Debug\SGaS.csproj.AssemblyReference.cache
-D:\Steam\steamapps\common\RimWorld\Mods\Small Graves and Sarcofaguses\Source\SGaS\obj\Debug\SGaS.csproj.CoreCompileInputs.cache
-D:\Steam\steamapps\common\RimWorld\Mods\Small Graves and Sarcofaguses\Source\SGaS\obj\Debug\SGaS.dll

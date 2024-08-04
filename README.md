@@ -1,2 +1,2 @@
 # Small-Graves-and-Sarcofaguses
-A RimWorld mod.
+A RimWorld mod. It really is.

@@ -39,7 +39,7 @@ namespace SGaS
 
         public override string SettingsCategory()
         {
-            return "Small Graves And Sarcofaguses";
+            return "Small Graves And Sarcophaguses";
         }
 
         public override void DoSettingsWindowContents(Rect rect)
@@ -47,10 +47,10 @@ namespace SGaS
             Listing_Standard listing_Standard = new Listing_Standard();
             listing_Standard.Begin(rect);
             listing_Standard.Gap();
-            listing_Standard.Label("Wanzi_BodySize".Translate(Math.Truncate(100 * settings.BodySizeMin) / 100).ToString(), -1f, "Wanzi_BodySize_Tooltip".Translate());
+            listing_Standard.Label("Wanzi_BodySize_Small".Translate(Math.Truncate(100 * settings.BodySizeMin) / 100).ToString(), -1f, "Wanzi_BodySize_Tooltip_Small".Translate());
             settings.BodySizeMin = listing_Standard.Slider(settings.BodySizeMin, 0f, 2f);
             listing_Standard.Gap();
-            if (listing_Standard.ButtonText("Wanzi_Reset".Translate()))
+            if (listing_Standard.ButtonText("Wanzi_Reset_Small".Translate()))
             {
                 settings.ResetSettings();
             }

@@ -7,7 +7,7 @@
     <description>A small ornamented burial receptacle for the honored dead.</description>
     <thingClass>Building_Sarcophagus</thingClass>
     <containedPawnsSelectable>true</containedPawnsSelectable>    
-    <uiIconPath>Things/Building/Misc/Sarcophagus_north</uiIconPath>
+    <uiIconPath>Things/Building/Misc/SmallSarcophagus_north</uiIconPath>
     <graphicData>
       <texPath>Things/Building/Misc/SmallSarcophagus</texPath>
       <graphicClass>Graphic_Multi</graphicClass>
@@ -17,11 +17,7 @@
         <offset>(0, 0, 0)</offset>
       </shadowData>
       <damageData>
-        <rect>(0.25,0.0,0.5,1)</rect>
-        <cornerTL>Damage/Corner</cornerTL>
-        <cornerTR>Damage/Corner</cornerTR>
-        <cornerBL>Damage/Corner</cornerBL>
-        <cornerBR>Damage/Corner</cornerBR>
+        <rect>(0.25,0.0,0.5,1)</rect>        
       </damageData>
     </graphicData>
     <size>(1,1)</size>

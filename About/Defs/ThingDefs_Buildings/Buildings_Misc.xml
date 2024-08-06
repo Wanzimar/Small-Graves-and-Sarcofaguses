@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wanzi_SmallSarcophagus</defName>
+    <label>small sarcophagus</label>
+    <description>A small ornamented burial receptacle for the honored dead.</description>
+    <thingClass>Building_Sarcophagus</thingClass>
+    <containedPawnsSelectable>true</containedPawnsSelectable>    
+    <uiIconPath>Things/Building/Misc/SmallSarcophagus_north</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Misc/SmallSarcophagus</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,2)</drawSize>
+      <shadowData>
+        <volume>(0.5, 0.3, 1)</volume>
+        <offset>(0, 0, 0)</offset>
+      </shadowData>
+      <damageData>
+        <rect>(0.25,0.0,0.5,1)</rect>        
+      </damageData>
+    </graphicData>
+    <size>(1,1)</size>
+    <pathCost>42</pathCost>
+    <castEdgeShadows>true</castEdgeShadows>    
+    <fillPercent>0.2</fillPercent>
+    <tickerType>Rare</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <constructionSkillPrerequisite>5</constructionSkillPrerequisite>
+    <building>      
+      <ai_chillDestination>false</ai_chillDestination>
+      <preventDeteriorationInside>true</preventDeteriorationInside>
+      <haulToContainerDuration>500</haulToContainerDuration>
+      <isEscapableContainer>true</isEscapableContainer>
+      <fullGraveGraphicData>
+        <texPath>Things/Building/Misc/SmallSarcophagus_Full</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(1.5,2)</drawSize>
+        <shadowData>
+        <volume>(0.5, 0.3, 1)</volume>
+        <offset>(0, 0, 0)</offset>
+      </shadowData>
+      </fullGraveGraphicData>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+          <specialFiltersToDisallow>
+			      
+            <li>Wanzi_AllowCorpsesByBodySize</li>
+		      </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+          <specialFiltersToDisallow>
+            <li>AllowCorpsesStranger</li>
+          </specialFiltersToDisallow>
+        </filter>
+      </defaultStorageSettings>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+      <paintable>true</paintable>
+    </building>
+    <statBases>
+      <WorkToBuild>1200</WorkToBuild>
+      <MaxHitPoints>125</MaxHitPoints>
+      <Flammability>1.0</Flammability>
+      <MeditationFocusStrength>0.10</MeditationFocusStrength>
+      <Beauty>0</Beauty>
+    </statBases>
+    <stuffCategories>
+      <li>Woody</li>
+      <li>Metallic</li>
+      <li>Stony</li>
+    </stuffCategories>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+      <li>ITab_Art</li>
+      <li>ITab_ContentsCasket</li>
+    </inspectorTabs>
+    <comps>
+      <li>
+        <compClass>CompQuality</compClass>
+      </li>
+      <li Class="CompProperties_Art">
+        <nameMaker>NamerArtSarcophagusPlate</nameMaker>
+        <descriptionMaker>ArtDescription_SarcophagusPlate</descriptionMaker>
+        <mustBeFullGrave>true</mustBeFullGrave>
+      </li>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Grave</compClass>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Morbid</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_GraveFull">
+            <offset>0.10</offset>
+          </li>
+          <li Class="FocusStrengthOffset_GraveCorpseRelationship">
+            <offset>0.10</offset>
+          </li>
+          <li Class="FocusStrengthOffset_NearbyGraves">
+            <defs>
+              <li>Grave</li>
+              <li>Sarcophagus</li>
+            </defs>
+            <offsetPerBuilding>0.01</offsetPerBuilding>
+            <radius>9.9</radius>
+            <maxBuildings>4</maxBuildings>
+            <focusPerFullGrave>0.01</focusPerFullGrave>
+            <explanationKey>MeditationFocusPerGrave</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
+    </comps>
+    <costStuffCount>30</costStuffCount>
+    <altitudeLayer>Building</altitudeLayer>
+    <passability>PassThroughOnly</passability>
+    <blockWind>false</blockWind>
+    <terrainAffordanceNeeded>Light</terrainAffordanceNeeded>    
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2050</uiOrder>
+    <designationHotKey>Misc9</designationHotKey>
+    <researchPrerequisites>
+      <li>ComplexFurniture</li>
+    </researchPrerequisites>
+    <placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>1</spectateDistance>
+      <allowedSpectateSides>Vertical</allowedSpectateSides>
+    </ritualFocus>
+  </ThingDef>
+
+  <ThingDef ParentName="BuildingBase">
+    <defName>Wanzi_SmallGrave</defName>
+    <label>small grave</label>
+    <description>A small decent final resting place. Colonists will visit full graves to gain meditative joy.</description>
+    <thingClass>Building_Grave</thingClass>  
+    <containedPawnsSelectable>true</containedPawnsSelectable>
+    <uiIconPath>Things/Building/Misc/GraveEmpty_south</uiIconPath>      
+    <graphicData>
+      <texPath>Things/Building/Misc/GraveEmpty</texPath>
+      <graphicClass>Graphic_Multi</graphicClass>
+      <drawSize>(1.5,2)</drawSize>
+    </graphicData>
+    <constructEffect>ConstructDirt</constructEffect>
+    <altitudeLayer>FloorEmplacement</altitudeLayer>
+    <useHitPoints>false</useHitPoints>
+    <size>(1,1)</size>
+    <tickerType>Rare</tickerType>
+    <canOverlapZones>false</canOverlapZones>
+    <statBases>
+      <WorkToBuild>400</WorkToBuild>
+      <MeditationFocusStrength>0.06</MeditationFocusStrength>
+    </statBases>
+    <passability>Standable</passability>
+    <defaultPlacingRot>South</defaultPlacingRot>
+    <building>
+      <ai_chillDestination>false</ai_chillDestination>
+      <expandHomeArea>false</expandHomeArea>
+      <isInert>true</isInert>
+      <preventDeteriorationInside>true</preventDeteriorationInside>
+      <haulToContainerDuration>500</haulToContainerDuration>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <isEscapableContainer>true</isEscapableContainer>
+      <fullGraveGraphicData>
+        <texPath>Things/Building/Misc/GraveFull</texPath>
+        <graphicClass>Graphic_Multi</graphicClass>
+        <drawSize>(1.5,2)</drawSize>
+      </fullGraveGraphicData>
+      <fixedStorageSettings>
+        <filter>
+          <categories>
+            <li>Corpses</li>
+          </categories>
+          <specialFiltersToDisallow>
+			      <li>Wanzi_AllowCorpsesByBodySize</li>
+            
+		      </specialFiltersToDisallow>
+        </filter>
+      </fixedStorageSettings>
+      <defaultStorageSettings>
+        <priority>Important</priority>
+        <filter>
+          <categories>
+            <li>CorpsesHumanlike</li>
+          </categories>
+        </filter>
+      </defaultStorageSettings>
+      <buildingTags>
+        <li>RitualFocus</li>
+      </buildingTags>
+    </building>
+    <inspectorTabs>
+      <li>ITab_Storage</li>
+    </inspectorTabs>
+    <terrainAffordanceNeeded>Diggable</terrainAffordanceNeeded>
+    <designationCategory>Misc</designationCategory>
+    <uiOrder>2050</uiOrder>
+    <designationHotKey>Misc8</designationHotKey>
+    <comps>
+      <li Class="CompProperties_AssignableToPawn">
+        <drawAssignmentOverlay>false</drawAssignmentOverlay>
+        <compClass>CompAssignableToPawn_Grave</compClass>
+      </li>
+      <li Class="CompProperties_MeditationFocus">
+        <statDef>MeditationFocusStrength</statDef>
+        <focusTypes>
+          <li>Morbid</li>
+        </focusTypes>
+        <offsets>
+          <li Class="FocusStrengthOffset_GraveFull">
+            <offset>0.10</offset>
+          </li>
+          <li Class="FocusStrengthOffset_GraveCorpseRelationship">
+            <offset>0.10</offset>
+          </li>
+          <li Class="FocusStrengthOffset_NearbyGraves">
+            <defs>
+              <li>Grave</li>
+              <li>Sarcophagus</li>
+            </defs>
+            <offsetPerBuilding>0.01</offsetPerBuilding>
+            <radius>9.9</radius>
+            <maxBuildings>4</maxBuildings>
+            <focusPerFullGrave>0.01</focusPerFullGrave>
+            <explanationKey>MeditationFocusPerGrave</explanationKey>
+            <explanationKeyAbstract>MeditationFocusPerGraveAbstract</explanationKeyAbstract>
+          </li>
+        </offsets>
+      </li>
+    </comps>
+    <placeWorkers>
+      <li>PlaceWorker_MeditationOffsetBuildingsNear</li>
+    </placeWorkers>
+    <ritualFocus>
+      <spectateDistance>1</spectateDistance>
+      <allowedSpectateSides>Vertical</allowedSpectateSides>
+    </ritualFocus>
+  </ThingDef>
+
+</Defs>

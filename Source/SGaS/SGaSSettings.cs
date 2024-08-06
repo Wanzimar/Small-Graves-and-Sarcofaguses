@@ -10,7 +10,7 @@ namespace SGaS
     internal class SGaSSettings : ModSettings
     {
         
-        public float BodySizeMin = 0.50f;
+        public float BodySizeMin = 0.50f;//minimum body isze to be consudered a "big" corpse
         
         public override void ExposeData()
         {            

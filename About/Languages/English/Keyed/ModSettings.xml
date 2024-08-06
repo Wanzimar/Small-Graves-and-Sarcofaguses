@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="utf-8" ?>
-<LanguageData>
-<Wanzi_BodySize_Small>Maximum body size of a corpse allowed in a small grave/sarcophagus: {0}</Wanzi_BodySize_Small>
-<Wanzi_BodySize_Tooltip_Small>Corpses with body size stat bigger than this will not be burried in small graves/sarcofaguses.</Wanzi_BodySize_Tooltip_Small>
-<Wanzi_Reset_Small>Reset</Wanzi_Reset_Small>
-</LanguageData>

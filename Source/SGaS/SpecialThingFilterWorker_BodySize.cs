@@ -19,11 +19,9 @@ namespace SGaS
             return false;
         }
 
-        public override bool CanEverMatch(ThingDef def)
+        public override bool CanEverMatch(ThingDef def)//not sure what yet
         {
-            return AlwaysMatches(def);// I don't understand this part, if you do I'd be grateful if you could explaine it to me)
-            //for some reason, this line seems to make it so there is no button to enable/disable this filter in the sarcofagus/grave "storage" tab, why?
-            //if a proper condition is written, the button appears (on regular sarcofaguses/graves, since the filter is dissallowed on small through xml)
+            return AlwaysMatches(def);
         }
 
         public override bool AlwaysMatches(ThingDef def) //a check for an entire race to see if all corpses from it will always fit the criteria?
